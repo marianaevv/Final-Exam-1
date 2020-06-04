@@ -2,10 +2,10 @@ import React from 'react';
 
 function Book( props ){
     return(
-        <div>
-            {/*
-                Your code goes here
-            */}
+        <div> 
+     
+            <h2>Book Info</h2>
+            
         </div>
     );
 }

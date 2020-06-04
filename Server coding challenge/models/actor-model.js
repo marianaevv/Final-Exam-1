@@ -28,10 +28,28 @@ const Actors = {
                 .catch( err => {
                     throw new Error( err );
                 });
+    },
+    getActorByName : function(firstName){
+        return actorsCollection
+        .findOne ({firstName})
+        .then(user =>{
+            return user;
+        })
+        .catch(err=>{
+            throw new Error(err.message);
+        })
+    },
+    addActorToMovieList :function(newActor){
+        return actorsCollection
+        .create(newActor)
+        .then(actorAdded=>{
+            return actorCreated;
+        })
+        .catch(err=>{
+            return err;
+        })
     }
-    /*
-        Your code goes here
-    */
+   
 }
 
 module.exports = {
